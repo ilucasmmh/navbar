@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --navbar-color: linear-gradient(45deg,#201f41,#422d53,#912e54,#d1788f,#dd7c86);
+    --bg-color: linear-gradient(45deg,#201f41,#422d53,#912e54,#d1788f,#dd7c86);
+    --black: #211f1f;
+    --white: #fff;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+
+    overflow-x: hidden;
+}
+
+/*ှSTART NAVBAR*/
+.navbar {
+    height: 80px;
+    background: transparent;
+    padding: 20px 30px;
+
+    transition: all 0.7s ease;
+}
+
+.navbar-brand.brandcenters{
+    position: absolute;
+    left: 50%;
+
+    transform: translateX(-50%);
+}
+
+.navbuttons{
+    border: 0;
+}
+
+.bars1,
+.bars2,
+.bars3 {
+    width: 28px;
+    height: 3px;
+    background: var(--white);
+    margin: 5px;
+
+    transition: all 0.5s;
+}
+
+.triangles .bars1{
+    transform: rotate(60deg) translate(8px, -3px);
+}
+
+.triangles .bars2{
+    transform: rotate(-60deg) translate(-1px, -8px);
+}
+
+.triangles .bar3{
+    transform: translate(0, 1px);
+}
+
+.changes .bars1{
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.changes .bars2{
+    opacity: 0;
+}
+
+.changes .bars3{
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active{
+    outline: none;
+    box-shadow: none;
+}
+
+.navbar-collapse{
+    position: relative;
+}
+
+.navmenus{
+    background: var(--bg-color);
+    padding: 5px 30px;
+}
+
+.menuitems{
+    color: var(--white) !important;
+    font-size: 18px;
+    letter-spacing: 1.5px;
+    border-bottom: 3px solid transparent;
+
+    transition: all 0.5s;
+}
+
+.menuitems:hover,
+.menuitems:focus,
+.menuitems:active{
+    color: var(--white) !important;
+    border-bottom: 3px solid var(--white);
+}
+
+@media (max-width:990px){
+    .navbar{
+        height: auto;
+    }
+}
+/*END NAVBAR*/
+
+/*START HEADER*/
+header {
+    width: 100vw;
+    height: 100vh;
+    background: var(--bg-color);
+    position: relative;
+}
+/*END HEADER*/
